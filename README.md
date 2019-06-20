@@ -5,7 +5,7 @@ This website allows for comments on comments through comment object inheritence.
 onto if needed. Admins will need to download bootstrap and add it to the /wwwroot folder in order to get the full aesthetic of the 
 thread and comment views. Also make sure to create a link a database using the Entity Core Framework's connection string.
 
-Below are some screenshots of the thread and comment pages:
+Below are some screenshots of the tests that passed and thread/comment pages:
 
 ![alt text](/MessagesFromDB.jpg)
 ![alt text](/ThreadsFromDB.PNG)
