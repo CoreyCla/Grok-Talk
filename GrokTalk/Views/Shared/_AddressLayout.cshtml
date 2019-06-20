@@ -1,0 +1,21 @@
+﻿@*Allows this layout to inherit from the default layout*@
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@*This layout is used for pages that ought to display an address (currently only 
+  Location and Person pages use it)*@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <address>
+        Nunya Biz Terrace<br />
+        Eugene, OR 97402<br />
+        <abbr title="Phone">P:</abbr>
+        555.555.5555
+    </address>
+    @RenderBody()
+</body>
+</html>

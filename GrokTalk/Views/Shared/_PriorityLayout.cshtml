@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "_PriorityLayout";
+}
+@*Allows this layout to inherit from the default layout*@
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@*This layout is used for pages that ought to display the number of messages with
+   the high priority flag on them*@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    
+    @*Represents the number of messages with high priority*@
+
+    @RenderBody()
+</body>
+</html>

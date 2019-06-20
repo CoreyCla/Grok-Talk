@@ -1,0 +1,24 @@
+﻿@model IOrderedEnumerable<Location>
+@{ 
+    Layout = "_AddressLayout";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    @{
+        ViewData["Title"] = "Locations";
+    }
+</head>
+<body>
+    <h2>Locations</h2>
+    <h4>Some locations worth noting.</h4>
+
+    @foreach (Location l in Model)
+    {
+        @l.Title <br />
+        @l.Address <br />
+        @l.About <br />
+        <p1>------------------------</p1><br />
+    }
+</body>
+</html>

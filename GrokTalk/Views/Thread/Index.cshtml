@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Thread>
+@{
+    Layout = "_Layout";
+}
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <h2>Threads</h2>
+    <h3 class="bg-primary p-2 text-white text-center"></h3>
+    <p3><b><strong>Number of Threads: @ViewBag.threadCount</strong></b></p3><br />
+    <br />
+    <a href="/Thread/AddThread" class="btn btn-primary">Add Thread</a> <br />
+    <br />
+    <div class="row p-1">
+        <div class="col font-weight-bold">Id</div>
+        <div class="col font-weight-bold">Date</div>
+        <div class="col font-weight-bold">Subject</div>
+    </div>
+
+    @foreach (Thread t in Model)
+    {
+        <div class="row p-1">
+            <div class="col">@t.Id </div>
+            <div class="col">@t.ExecutionDate </div>
+            <div class="col">@t.Subject </div>
+            <a href="/Message" class="btn btn-primary btn-sm">Go to Thread</a>
+        </div>
+    }
+    <br />
+</body>
+</html> 

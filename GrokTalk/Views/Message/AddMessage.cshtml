@@ -1,0 +1,26 @@
+﻿@*The Message model is required to use the "asp-for="Priority" tag helper*@
+@model Message
+@{
+    ViewData["Title"] = "AddMessage";
+}
+
+<h2>AddMessage</h2>
+
+
+<form asp-controller="Message" asp-action="AddMessage" method="post">
+    <label asp-for="From">From</label>
+    <input class="form-control" name="From" /><br />
+    <span asp-validation-for="From"></span>
+    <div class="form-group">
+        <label>Is this high priority?</label>
+        <select asp-for="Priority" class="form-control">
+            <option value="">Choose an option</option>
+            <option value="true">Yes</option>
+            <option value="false">No</option>
+        </select>
+    </div>
+    <label asp-for="Body">Body</label>
+    <input class="form-control" asp-for="Body" name="Body" /><br />
+    <span asp-validation-for="Body"></span>
+    <input type="submit" value="Enter" />
+</form>

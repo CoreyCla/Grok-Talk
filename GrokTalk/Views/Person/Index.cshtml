@@ -1,0 +1,24 @@
+﻿@model IOrderedEnumerable<Person>
+@{ 
+    Layout = "_AddressLayout";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    @{
+        ViewData["Title"] = "People";
+    }
+</head>
+<body>
+    <h2>People</h2>
+    <h4>Some people worth noting.</h4>
+
+    @foreach (Person p in Model)
+    {
+        @p.Name <br />
+        @p.Position <br />
+        @p.About <br />
+        <p1>------------------------</p1><br />
+    }
+</body>
+</html>

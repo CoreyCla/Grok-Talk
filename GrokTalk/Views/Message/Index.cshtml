@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+@model IOrderedEnumerable<Message>
+@{
+    Layout = "_Layout";
+}
+
+<html>
+<head>
+</head>
+<body>
+    <h2>Comments</h2>
+    <h3 class="bg-primary p-2 text-white text-center"></h3>
+    <p3><b><strong>Number of High-Priority Messages: @ViewBag.PriorityCount</strong></b></p3><br />
+    <br />
+    <div class="row p-1">
+        <div class="col font-weight-bold">Id</div>
+        <div class="col font-weight-bold">Date</div>
+        <div class="col font-weight-bold">From</div>
+        <div class="col font-weight-bold">Priority</div>
+        <div class="col font-weight-bold">Message</div>
+    </div>
+
+    @*Iterates through the the ordered list of messages returned by the controller. The initial
+        list is ordered from oldest to newest; so, this ensures that the list is displayed with
+        the newest post first*@
+    @foreach (Message m in Model.Reverse())
+    {
+        <div class="row p-1">
+            <div class="col">@m.Id </div>
+            <div class="col">@m.ExecutionDate </div>
+            <div class="col">@m.From </div>
+            <div class="col">@(m.Priority == true ? "High Priority" : "-") </div>
+            <div class="col">@m.Body </div>
+        </div>
+    }
+    <a href="/Message/AddMessage" class="btn btn-primary">Add Message</a> <br />
+    <br />
+    <a href="Thread" class="btn btn-primary">Back</a><br />
+</body>
+</html>
+

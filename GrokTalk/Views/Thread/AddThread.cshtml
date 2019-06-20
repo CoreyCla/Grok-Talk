@@ -1,0 +1,15 @@
+﻿@model Thread
+@{
+    ViewData["Title"] = "AddThread";
+}
+
+<h2>AddThread</h2>
+
+
+<h2>Subjects</h2>
+<form asp-controller="Thread" asp-action="AddThread" method="post">
+    <div asp-validation-summary="All"></div>
+    <label class="form-control" asp-for="Subject">Subject</label>
+    <input name="subject" /><br />
+    <input type="submit" value="Enter" />
+</form>
