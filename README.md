@@ -7,6 +7,6 @@ thread and comment views.
 
 Below are some screenshots of the thread and comment pages:
 
-![alt text](/MessagesFromDB.PNG)
+![alt text](/MessagesFromDB.jpg)
 ![alt text](/ThreadsFromDB.PNG)
 ![alt text](/TestsPassed.PNG)
